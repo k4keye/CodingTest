@@ -1,6 +1,8 @@
 package com.company.KaKao.StringCompression;
 
 public class StringCompression {
+
+    // 지금 3번째 압축에서 랭스 에러가 발생하고있다.
     public StringCompression()
     {
         String s = "aabbaccc";
