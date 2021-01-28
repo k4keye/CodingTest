@@ -21,13 +21,10 @@ public class StringCompression {
                     if(tag.equals(compar)) overCount++;//같이면 카운트 증가
                     else
                     {
-                        if(overCount)
+                        //if(overCount)
                     }
                 }
             }
-
-
-
 
         }
     }
