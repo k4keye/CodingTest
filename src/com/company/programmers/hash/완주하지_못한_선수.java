@@ -13,7 +13,7 @@ public class 완주하지_못한_선수 {
 
 
         /*
-        아쉽게 안된다.
+        안된다.
         List<String> completionList = new ArrayList<>();
         completionList.addAll(Arrays.asList(completion));
 
@@ -23,6 +23,9 @@ public class 완주하지_못한_선수 {
     }
 
     public String 남의빠른코드(String[] participant, String[] completion) {
+        //같은 이름을 카운트하고 도작한사람 이름을 빼서 0 이 아닌사람을 판단하는 코드이다
+        //속도차이가 매우난다.
+        //아마 정렬을 2번한 것때문인듯.
 
         String answer = "";
         HashMap<String, Integer> hm = new HashMap<>();

@@ -1,4 +1,4 @@
-package programmers;
+package com.company.programmers.hash;
 
 import org.junit.Test;
 
