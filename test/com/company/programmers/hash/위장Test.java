@@ -1,7 +1,7 @@
 package com.company.programmers.hash;
 
 import org.junit.jupiter.api.Test;
-
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 class 위장Test {
@@ -41,7 +41,7 @@ class 위장Test {
     void 스트림연습() {
 
         위장 Target = new 위장();
-        Target.streamTest();
+
     }
 }
 

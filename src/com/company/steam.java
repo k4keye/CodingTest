@@ -51,7 +51,42 @@ public class steam {
                 new Menu("고기", 1200)
                 , new Menu("랍스타", 7600)
                 , new Menu("피자", 3100));
+
         Integer collect = menuList.stream().collect(Collectors.reducing(0, Menu::getPrice, (a, b) ->   a+b ));
+    }
+
+    public void simple()
+    {
+        List<String> list = Arrays.asList("가","나","디");
+        String[] sArr = new String[3];
+
+        list.stream().forEach(p -> System.out.println(p));
+        final List<Menu> menuList = Arrays.asList(
+                new Menu("고기", 1200)
+                , new Menu("랍스타", 7600)
+                , new Menu("피자", 3100));
+        menuList.stream().forEach(p  ->print(p.getName()));
+    }
+
+    public static void print(String str)
+    {
+        System.out.println(str);
+    }
+
+    public void streamIndex()
+    {
+        String s ="123456789";
+        int[] index ={0};
+        String collect = s.chars().filter(c -> ++index[0] % 2 == 0)
+                .mapToObj(Character::toString)
+                .collect(Collectors.joining(""));
+        print(collect);
+        Arrays.stream(index).forEach(System.out::println);
+
+       /* String collect1 = s.chars()
+                .filter((c,i) -> i % 2 == 1)  // (data, index) 를 파라미터로 하는 람다식을 쓰면 data에는 데이터가 index에는 인덱스 값이 알아서 들어온다.
+                .mapToObj(Character::toString)
+                .collect(Collectors.joining(""));*/
     }
 
 }
